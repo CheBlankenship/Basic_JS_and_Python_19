@@ -94,21 +94,174 @@ function jyanken(player1, player2) {
 
 // TICTACTOE
 
-// function ticTacToe(table) {
-//   var result = [];
+var arr = [
+            ["o", "o", "o"],
+            ["x", "x", "x"],
+            ["x", "x", "x"]
+          ];
+
+function classify(arr) {
+  // var for0 = [];
+  // var forX = [];
+  var count0 = 0;
+  var countX = 0;
+
+for(var i=0; i< arr.length; i++) {
+  for(var j=0; j<=2; j++) {
+    if(arr[0][0] === 'o') {
+      count0 += 1;
+        if(arr[0][1] === 'o') {
+          cont0 +=1;
+        if(arr[0][2] === 'o'){
+          count0 +=1;
+        }
+      }
+    }
+    if(count0 === 3){
+      console.log("O is the winner!!!!!!!!");
+    }
+  }
+}
+
+
+
+  if(count0 === 3) {
+    console.log("O wins!!");
+    return ;
+  }
+  else{
+    console.log("X wins!!");
+    return ;
+  }
+}
+
+//   console.log(count0);
+//   console.log(countX);
+// }
+
+
+// classify(arr);
+
+
+// positive num
+
+var numbers = [1,2,3,4,5,-9,-5,-3,-44];
+
+function positiveNum(arr){
+  return arr.filter(function(num) {
+    return num >0;
+  });
+}
+
+// console.log(positiveNum(numbers));
+
+// even numbers
+
+function evenNum(arr) {
+  return arr.filter(function(num) {
+    return num %2 === 0;
+  });
+
+}
+
+// console.log(evenNum(numbers));
+
+
+function squareNum(arr) {
+  return arr.map(function(num) {
+      return num * num;
+  });
+}
+// console.log(squareNum(numbers));
+
+
+var cities = [
+  { name: 'Los Angeles', temperature: 60.0},
+  { name: 'Atlanta', temperature: 52.0 },
+  { name: 'Detroit', temperature: 48.0 },
+  { name: 'New York', temperature: 80.0 }
+];
+
+
+function  showCities(cities) {
+  return cities.filter(function(mati) {
+    return mati.temperature > 70;
+  });
+}
+
+// console.log(showCities(cities));
+
+function  showCitiesName(cities) {
+  return cities.map(function(mati) {
+    return mati.name;
+    });
+}
+
+// console.log(showCitiesName(cities));
+
+
+// Sum an array
+var numbers = [1,2,3,4];
+
+
+function sumArr(numbers) {
+  return numbers.reduce(function(a,b) {
+    return a + b;
+  },0);
+}
+
+// console.log(sumArr(numbers));
+
+// Acronym
+
+function acronym(words) {
+    return words.reduce(function(a, b) {
+      return a + b;
+    },"");
+}
+
+// console.log(acronym(["Very", "Important", "Person"]));
+
+// forEach
+
+var arr = [
+  { name: 'Bob' },
+  { name:'Alice' },
+  { name:'Joe' }
+];
+// forEach(arr, function(person) {
+//   console.log('Hello, ' + person.name + '!');
+// });
+
+// function aisatu(arr) {
+//   return arr[0].name;
+// }
+// console.log(aisatu(arr));
+
+// Usiing map
+function loop(arr) {
+  return arr.map(function(shimei) {
+    console.log("Hello " + shimei.name + " !");
+  });
+}
+loop(arr);
+
 //
-//   for(var i=0; i < table.length; i++) {
+// function fun(arr) {
+//   return arr.forEach(function(simei) {
+//     return simei[i].name;
+//   }, "");
+// }
 //
-//
-//   }
-//
-// };
-//
-// ticTacToe([
-//           ['O', 'O','O'],
-//           ['X', 'X', 'O'],
-//           ['X', 'O', 'X']
-//         ]);
+// console.log(fun(arr));
+
+
+
+
+
+
+
+
 
 
 
