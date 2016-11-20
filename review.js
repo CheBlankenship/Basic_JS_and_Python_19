@@ -244,7 +244,7 @@ function loop(arr) {
     console.log("Hello " + shimei.name + " !");
   });
 }
-loop(arr);
+// loop(arr);
 
 //
 // function fun(arr) {
@@ -258,13 +258,32 @@ loop(arr);
 
 
 
+// call3Times();
+
+function call3Times() {
+  fun();
+  fun();
+  fun();
+
+}
+
+// call3Times();
 
 
-
-
-
-
-
+function callNTimes(times){
+  var count = 0;
+  fun();
+  function fun() {
+    for(var i=0; i<times; i++) {
+      count += 1;
+      console.log ("Hello !!!!");
+      if(count === times) {
+          return;
+      }
+    }
+  }
+}
+callNTimes(5);
 
 
 
